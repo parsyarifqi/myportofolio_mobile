@@ -24,7 +24,7 @@ class MyHomePage extends StatelessWidget {
       // AppBar menampilkan bar bagian atas halaman aplikasi.
       appBar: AppBar(
         title: const Text(
-          'MyPortfolio',
+          'MyPortofolio',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
