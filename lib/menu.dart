@@ -11,6 +11,10 @@ class MyHomePage extends StatelessWidget {
     ItemHomepage("Lihat Proyek", Icons.folder, Colors.blue),
     ItemHomepage("Tambah Proyek", Icons.add_circle, Colors.green),
     ItemHomepage("Logout", Icons.logout, Colors.red),
+    ItemHomepage("Lihat Pengalaman", Icons.science, Colors.amber),
+    ItemHomepage("Tambah Pengalaman", Icons.add_circle, Colors.orange),
+    ItemHomepage("Lihat Riwayat Edukasi", Icons.school, Colors.purple),
+    ItemHomepage("Tambah Riwayat Edukasi", Icons.add_circle, Colors.cyan),
   ];
 
     @override
@@ -31,54 +35,56 @@ class MyHomePage extends StatelessWidget {
       // Body halaman utama dengan padding di sekelilingnya.
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // Baris horizontal untuk menampilkan 3 InfoCard secara sejajar.
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                InfoCard(title: 'NPM', content: npm),
-                InfoCard(title: 'Name', content: nama),
-                InfoCard(title: 'Class', content: kelas),
-              ],
-            ),
-
-            const SizedBox(height: 16.0),
-
-            // Bagian tengah: pesan sambutan dan kisi tombol menu portofolio.
-            Center(
-              child: Column(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              // Baris horizontal untuk menampilkan 3 InfoCard secara sejajar.
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  const Padding(
-                    padding: EdgeInsets.only(top: 16.0),
-                    child: Text(
-                      'Selamat datang di MyPortfolio Mobile!',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18.0,
-                      ),
-                    ),
-                  ),
-
-                  // GridView menampilkan kartu tombol dalam tata letak kisi 3 kolom.
-                  GridView.count(
-                    primary: true,
-                    padding: const EdgeInsets.all(20),
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10,
-                    crossAxisCount: 3,
-                    // shrinkWrap agar ukuran kisi menyesuaikan tinggi konten anak.
-                    shrinkWrap: true,
-                    children: items.map((ItemHomepage item) {
-                      return ItemCard(item);
-                    }).toList(),
-                  ),
+                  InfoCard(title: 'NPM', content: npm),
+                  InfoCard(title: 'Name', content: nama),
+                  InfoCard(title: 'Class', content: kelas),
                 ],
               ),
-            ),
-          ],
-        ),
+
+              const SizedBox(height: 16.0),
+
+              // Bagian tengah: pesan sambutan dan kisi tombol menu portofolio.
+              Center(
+                child: Column(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(top: 16.0),
+                      child: Text(
+                        'Selamat datang di MyPortfolio Mobile!',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18.0,
+                        ),
+                      ),
+                    ),
+
+                    // GridView menampilkan kartu tombol dalam tata letak kisi 3 kolom.
+                    GridView.count(
+                      primary: true,
+                      padding: const EdgeInsets.all(20),
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                      crossAxisCount: 3,
+                      // shrinkWrap agar ukuran kisi menyesuaikan tinggi konten anak.
+                      shrinkWrap: true,
+                      children: items.map((ItemHomepage item) {
+                        return ItemCard(item);
+                      }).toList(),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        )
       ),
     );
   }
