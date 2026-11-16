@@ -10,11 +10,11 @@ class MyHomePage extends StatelessWidget {
   final List<ItemHomepage> items = [
     ItemHomepage("Lihat Proyek", Icons.folder, Colors.blue),
     ItemHomepage("Tambah Proyek", Icons.add_circle, Colors.green),
-    ItemHomepage("Logout", Icons.logout, Colors.red),
     ItemHomepage("Lihat Pengalaman", Icons.science, Colors.amber),
     ItemHomepage("Tambah Pengalaman", Icons.add_circle, Colors.orange),
     ItemHomepage("Lihat Riwayat Edukasi", Icons.school, Colors.purple),
     ItemHomepage("Tambah Riwayat Edukasi", Icons.add_circle, Colors.cyan),
+    ItemHomepage("Logout", Icons.logout, Colors.red),
   ];
 
     @override
@@ -38,31 +38,31 @@ class MyHomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              // Baris horizontal untuk menampilkan 3 InfoCard secara sejajar.
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  InfoCard(title: 'NPM', content: npm),
-                  InfoCard(title: 'Name', content: nama),
-                  InfoCard(title: 'Class', content: kelas),
-                ],
-              ),
-
-              const SizedBox(height: 16.0),
-
-              // Bagian tengah: pesan sambutan dan kisi tombol menu portofolio.
-              Center(
-                child: Column(
+              children: [
+                // Baris horizontal untuk menampilkan 3 InfoCard secara sejajar.
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.only(top: 16.0),
-                      child: Text(
-                        'Selamat datang di MyPortfolio Mobile!',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18.0,
-                        ),
+                    InfoCard(title: 'NPM', content: npm),
+                    InfoCard(title: 'Name', content: nama),
+                    InfoCard(title: 'Class', content: kelas),
+                  ],
+                ),
+
+                const SizedBox(height: 16.0),
+
+                // Bagian tengah: pesan sambutan dan kisi tombol menu portofolio.
+                Center(
+                  child: Column(
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.only(top: 16.0),
+                        child: Text(
+                          'Selamat datang di MyPortfolio Mobile!',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18.0,
+                          ),
                       ),
                     ),
 
