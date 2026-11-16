@@ -49,4 +49,5 @@ link percakapan AI yang saya gunakan dalam pengerjaan tugas individu 7: https://
 15 November: Menambahkan beberapa action card menu portofolio serta mengatasi masalah overflow konten dengan membuat homepage scrollable
 15 November: Memperbaiki typo tulisan myportofolio pada header
 15 November: Menempatkan tombol logout pada urutan terakhir.
-15 November: Menjawab pertanyaan reflektif, membuat AI Disclosure, Membuat instruksi setup mingguan, serta menambahkan progress mingguan.
+16 November: Menjawab pertanyaan reflektif, membuat AI Disclosure, Membuat instruksi setup mingguan, serta menambahkan progress mingguan.
+16 November: Mengedit jawaban pertanyaan reflektif nomor 4.
