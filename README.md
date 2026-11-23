@@ -51,3 +51,54 @@ link percakapan AI yang saya gunakan dalam pengerjaan tugas individu 7: https://
 15 November: Menempatkan tombol logout pada urutan terakhir.
 16 November: Menjawab pertanyaan reflektif, membuat AI Disclosure, Membuat instruksi setup mingguan, serta menambahkan progress mingguan.
 16 November: Mengedit jawaban pertanyaan reflektif nomor 4.
+
+
+### Tugas 8 ###
+
+### Pertanyaan Reflektif 
+1. Navigator.push(): Menambahkan halaman baru kedalam stack, halaman yang sedang aktif akan ditimpa dengan halaman baru. Ketika pengguna menekan tombol back, tampilan akan kembali ke halaman sebelumnya yang ditimpa
+
+
+Navigator.pushReplacement(): Menggantikan sepenuhnya halaman di stack paling atas dengan halaman baru. Ketika pengguna menekean tombol back, tampilan akan kembali ke halaman sebelum halaman yang digantikan.
+
+
+Navigator.pop(): Menutup halaman saat ini dan kembali ke halaman sebelumnya di navigation stack.
+
+
+Metode yang digunakan untuk membuka formulir dari kartu aksi adalah Navigator.push().
+
+
+Opsi home di drawer menggunakan Navigator.pushReplacement(context, MaterialPageRoute(build (context) => MyHomePage(),),) ketika opsi home dipilih maka halaman pada stack yang saat ini sedang dibuka (misalkan tampilan formulir tambah proyek) akan digantikan dengan tampilan Home dengan memanggil route MyHomePage() dan tampilan akan berpindah ke home page.
+
+
+2. Scaffold berfungsi sebagai kerangka utama yang mengatur struktur seperti AppBar dan Drawer. AppBar berfungsi menampilkan bagian atas halaman seperti judul dan tombol navigasi. AppBar memastikan tampilan header yang konsisten antar halaman. Drawer menyediakan menu navigasi untuk berpindah antar halaman. Gabungan dari ketiga elemen tersebut menjaga konsistensi struktur dan navigasi antar halaman berbeda.
+
+Contoh penggunaan warna tema portofolio di lebih dari satu halaman adalah penggunaan warna indigo pada bagian AppBar yang digunakan pada homepage, tambah proyek, dan tambah pengalaman melalui Theme.of(context).colorScheme.primary
+
+3. Tata letak formulir menggunakan Form, SingleChildScrollView, Column, Row, Padding, dan SizedBox dipilih agar seluruh kolom input dan tombol save tersusun terstruktur serta tetap dapat dijangkau pada layar sempit maupun saat keyboard muncul. 
+
+Widget pengatur jarak seperti Padding.
+
+SizedBox memberi ruang di sekitar widget dan jarak antar komponen agar elemen tidak saling berhimpit.  
+
+SingleChildScrollView memungkinkan konten di scroll secara vertikal ketika tinggi konten melebihi ruang layar yang tersedia atau saat keyboard digital menutupi sebagian layar.
+
+4. GlobalKey<FormState> berperan untuk mengakses dan mengontrol state dari widget Form seperti menjalankan proses validasi
+
+validator berperan untuk memeriksa apakah input yang dimasukkan pengguna memenuhi aturan/syarat tertentu. Jika input tidak valid maka valdiator akan menampilkan pesan kesalahan.
+
+validate() berperan untuk menjalankan seluruh validator pada Form. validate() akan menghasilkan true jika semua input valid dan false jika terdapat input yang invalid.
+
+Contoh nilai yang ditolak oleh validasi adalah ketika input yang diberikan hanya karakter spasi. Memiliih jenis input atau papan ketik saja tidak cukup karena tidak menjamin input yang diberikan oleh pengguna valid. Pengguna bisa saja memasukkan hanya karakter spasi untuk nama atau deskripsi atau input yang terlalu panjang pada nama. Oleh karena itu peran validator diperlukan.
+
+### AI Disclosure
+Dengan ini saya menyatakan bahwa pengerjaan Tugas Individu 8 ini saya kerjakan dengan menggunakan bantuan AI. Strategi penggunaan AI saya adalah dengan meminta AI untuk membagi tahapan pengerjaan tugas menjadi beberapa step yang terstruktur agar progress pengerjaan tugas dapat di track dengan jelas. Saya meminta AI untuk mebuat saya turut ikut mengerjakan dan tidak hanya copy paste tanpa pikir panjang. Pada setiap langkahnya AI memberikan saya pertanyaan terkait pemahaman saya terhadap kode agar saya lebih dapat memahami alur kode yang saya buat. Selain itu saya juga menggunakan AI untuk melakukan debugging dan mendeteksi bug/kesalahan dalam kode saya.
+link percakapan AI yang saya gunakan dalam pengerjaan tugas individu 8:
+
+### Instruksi Setup Mingguan:
+-Membuat branch baru sesuai dengan tugas/tutorial yang diberikan
+-Menegerjakan tugas/tutorial secara bertahap dalam langkah-langkah yang terstruktur
+-Melakukan commit setiap langkah atau setiap perbaikan bug/kesalahan yang dilakukan
+-Melakukan merge ke branch main agar tetap sinkron
+
+### Progress Mingguan
