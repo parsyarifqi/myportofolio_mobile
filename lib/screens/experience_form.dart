@@ -204,7 +204,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                                       Text('Deskripsi: $_description'),
                                       Text('Kategori: $_category'),
                                       Text('Tanggal Dimulai: ${DateField.format(_startDate!)}'),
-                                      Text('Tanggal Berakhir: ${DateField.format(_endDate!)}'),
+                                      Text('Tanggal Berakhir: ${_isCurrent ? "Masih berlangsung" : DateField.format(_endDate!)}'),
                                     ],
                                   ),
                                 ),
