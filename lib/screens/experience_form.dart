@@ -137,7 +137,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                 controller: _startDateController,
                 initialDate: _startDate,
                 onPicked: (d) => setState(() => _startDate = d),
-                validator: (_) => _startDate == null ? "Started At wajib diisi!" : null,
+                validator: (_) => _startDate == null ? "Waktu mulai wajib diisi!" : null,
               ),
 
               // === End date ===
@@ -148,7 +148,13 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                 enabled: !_isCurrent,
                 onPicked: (d) => setState(() => _endDate = d),
                 validator: (_) {
-                  // TODO: isi validasimu sendiri
+                  if (_isCurrent) return null;
+                  if (_endDate == null) {
+                    return "Ended At wajib dipilih, atau aktifkan 'Masih berlangsung'!";
+                  }
+                  if (_startDate != null && _endDate!.isBefore(_startDate!)) {
+                    return "Waktu berakhir tidak boleh lebih awal dari waktu mulai";
+                  }
                   return null;
                 },
               ),
