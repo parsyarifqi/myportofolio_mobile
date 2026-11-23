@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// TODO: Impor drawer yang sudah dibuat sebelumnya
 import 'package:myportofolio_mobile/widgets/left_drawer.dart';
 
 class ProjectFormPage extends StatefulWidget {
@@ -40,7 +39,6 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
       ),
 
       drawer: const LeftDrawer(),
-      // TODO: Tambahkan drawer yang sudah dibuat di sini
       body: Form(
         key: _formKey,
         child: SingleChildScrollView(

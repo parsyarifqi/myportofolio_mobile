@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// TODO: Impor drawer yang sudah dibuat sebelumnya
 import 'package:myportofolio_mobile/widgets/left_drawer.dart';
 import 'package:myportofolio_mobile/widgets/date_field.dart';
 
@@ -47,7 +46,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
 
       drawer: const LeftDrawer(),
       
-      body: Material(// TODO: Tambahkan drawer yang sudah dibuat di sini
+      body: Material(
         child: Form(
           key: _formKey,
           child: SingleChildScrollView(
