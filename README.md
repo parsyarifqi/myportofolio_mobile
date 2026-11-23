@@ -102,3 +102,11 @@ link percakapan AI yang saya gunakan dalam pengerjaan tugas individu 8:
 -Melakukan merge ke branch main agar tetap sinkron
 
 ### Progress Mingguan
+23 Novembver: menambahkan /lib/screens/experience_form.dart dan /lib/date_field.dart untuk widget date field untuk field started_at dan ended_at pada experience form.
+23 November: menambahkan validator untuk endDate pada experience_form.dart.
+23 November: menambahkan routing dari homepage dan side drawer ke halaman form experience form.
+23 November: Menambahkan validator untuk mengecek apakah field nama pengalaman memiliki panjang kurang dari 100 karakter,
+23 November: membersihkan comment TODO.
+23 November: format output startDate dan endDate pada experience fomr dan menambahkan fungsi dispose untuk membuang resource yang tidak diperlukan saat halaman di pop dari stack.
+23 November: memperbarui README.md dengan pertanyaan reflektif, AI Disclosure, dan Instruksi Setup Mingguan.
+23 November: memperbarui README.md dengan Progress Mingguan.
