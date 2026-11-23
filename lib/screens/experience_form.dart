@@ -74,6 +74,10 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                       if (value == null || value.trim().isEmpty) {
                         return "Nama pengalaman tidak boleh kosong!";
                       }
+
+                      if (value.trim().length > 100) {
+                        return "Nama pengalaman maksimal 100 karakter";
+                      }
                       return null;
                     },
                   ),
