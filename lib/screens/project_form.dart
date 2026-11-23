@@ -193,7 +193,6 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
                                   child: const Text('OK'),
                                   onPressed: () {
                                     Navigator.pop(context);
-                                    _formKey.currentState!.reset();
                                   },
                                 ),
                               ],

@@ -32,6 +32,13 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
   ];
 
   @override
+  void dispose() {
+    _startDateController.dispose();
+    _endDateController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -196,8 +203,8 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                                       Text('Nama Pengalaman: $_experienceName'),
                                       Text('Deskripsi: $_description'),
                                       Text('Kategori: $_category'),
-                                      Text('Tanggal Dimulai: $_startDate'),
-                                      Text('Tanggal Berakhir: $_endDate'),
+                                      Text('Tanggal Dimulai: ${DateField.format(_startDate!)}'),
+                                      Text('Tanggal Berakhir: ${DateField.format(_endDate!)}'),
                                     ],
                                   ),
                                 ),
@@ -206,7 +213,6 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                                     child: const Text('OK'),
                                     onPressed: () {
                                       Navigator.pop(context);
-                                      _formKey.currentState!.reset();
                                     },
                                   ),
                                 ],
