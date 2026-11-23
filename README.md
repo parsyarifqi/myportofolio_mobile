@@ -93,7 +93,7 @@ Contoh nilai yang ditolak oleh validasi adalah ketika input yang diberikan hanya
 
 ### AI Disclosure
 Dengan ini saya menyatakan bahwa pengerjaan Tugas Individu 8 ini saya kerjakan dengan menggunakan bantuan AI. Strategi penggunaan AI saya adalah dengan meminta AI untuk membagi tahapan pengerjaan tugas menjadi beberapa step yang terstruktur agar progress pengerjaan tugas dapat di track dengan jelas. Saya meminta AI untuk mebuat saya turut ikut mengerjakan dan tidak hanya copy paste tanpa pikir panjang. Pada setiap langkahnya AI memberikan saya pertanyaan terkait pemahaman saya terhadap kode agar saya lebih dapat memahami alur kode yang saya buat. Selain itu saya juga menggunakan AI untuk melakukan debugging dan mendeteksi bug/kesalahan dalam kode saya.
-link percakapan AI yang saya gunakan dalam pengerjaan tugas individu 8:
+link percakapan AI yang saya gunakan dalam pengerjaan tugas individu 8: https://claude.ai/share/45a1eeb8-e0a2-43b6-babc-e5a20a452e97
 
 ### Instruksi Setup Mingguan:
 -Membuat branch baru sesuai dengan tugas/tutorial yang diberikan
