@@ -31,11 +31,11 @@ class _LoginScreenState extends State<LoginScreen> {
     // - In finally: reset _isSubmitting to false inside setState().
     try {
       await context.read<AuthState>().login(_username, _password);
-    } on ApiException catch(e) {
+    } on ApiException catch (e) {
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Login failed (${e.statusCode})")),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text("Login failed (${e.statusCode})")));
     } finally {
       if (mounted) {
         setState(() {

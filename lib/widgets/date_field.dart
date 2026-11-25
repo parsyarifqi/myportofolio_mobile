@@ -53,9 +53,7 @@ class DateField extends StatelessWidget {
           labelText: label,
           hintText: "Pilih tanggal",
           suffixIcon: const Icon(Icons.calendar_today),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(5.0),
-          ),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
         ),
       ),
     );

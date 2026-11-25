@@ -13,10 +13,9 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
   final _formKey = GlobalKey<FormState>();
   final _startDateController = TextEditingController();
   final _endDateController = TextEditingController();
-  DateTime ? _startDate;
-  DateTime ? _endDate;
+  DateTime? _startDate;
+  DateTime? _endDate;
   bool _isCurrent = false;
-  
 
   String _experienceName = "";
   String _description = "";
@@ -28,7 +27,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
     'Part-time',
     'Full-time',
     'Freelance',
-    'Academics'
+    'Academics',
   ];
 
   @override
@@ -42,17 +41,13 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text(
-            'Add Experience Form',
-          ),
-        ),
+        title: const Center(child: Text('Add Experience Form')),
         backgroundColor: Colors.indigo,
         foregroundColor: Colors.white,
       ),
 
       drawer: const LeftDrawer(),
-      
+
       body: Material(
         child: Form(
           key: _formKey,
@@ -127,10 +122,12 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                     ),
                     initialValue: _category,
                     items: _categories
-                        .map((category) => DropdownMenuItem(
-                              value: category,
-                              child: Text(category),
-                            ))
+                        .map(
+                          (category) => DropdownMenuItem(
+                            value: category,
+                            child: Text(category),
+                          ),
+                        )
                         .toList(),
                     onChanged: (String? newValue) {
                       setState(() {
@@ -146,7 +143,8 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                   controller: _startDateController,
                   initialDate: _startDate,
                   onPicked: (d) => setState(() => _startDate = d),
-                  validator: (_) => _startDate == null ? "Waktu mulai wajib diisi!" : null,
+                  validator: (_) =>
+                      _startDate == null ? "Waktu mulai wajib diisi!" : null,
                 ),
 
                 SwitchListTile(
@@ -178,7 +176,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                     return null;
                   },
                 ),
-    
+
                 // === Tombol Simpan ===
                 Align(
                   alignment: Alignment.bottomCenter,
@@ -186,8 +184,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
                       style: ButtonStyle(
-                        backgroundColor:
-                            WidgetStateProperty.all(Colors.indigo),
+                        backgroundColor: WidgetStateProperty.all(Colors.indigo),
                       ),
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
@@ -195,16 +192,23 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                             context: context,
                             builder: (context) {
                               return AlertDialog(
-                                title: const Text('Pengalaman berhasil ditambahkan!'),
+                                title: const Text(
+                                  'Pengalaman berhasil ditambahkan!',
+                                ),
                                 content: SingleChildScrollView(
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text('Nama Pengalaman: $_experienceName'),
                                       Text('Deskripsi: $_description'),
                                       Text('Kategori: $_category'),
-                                      Text('Tanggal Dimulai: ${DateField.format(_startDate!)}'),
-                                      Text('Tanggal Berakhir: ${_isCurrent ? "Masih berlangsung" : DateField.format(_endDate!)}'),
+                                      Text(
+                                        'Tanggal Dimulai: ${DateField.format(_startDate!)}',
+                                      ),
+                                      Text(
+                                        'Tanggal Berakhir: ${_isCurrent ? "Masih berlangsung" : DateField.format(_endDate!)}',
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -227,12 +231,12 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                       ),
                     ),
                   ),
-                ),              
+                ),
               ],
             ),
           ),
         ),
-      )
+      ),
     );
   }
 }

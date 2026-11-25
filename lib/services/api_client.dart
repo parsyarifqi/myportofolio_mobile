@@ -45,7 +45,7 @@ class ApiClient {
     final response = await _client.post(
       _uri('/api/v1/projects/'),
       headers: {
-        'Accept' : 'application/json',
+        'Accept': 'application/json',
         'Content-Type': 'application/json; charset=UTF-8',
         'Authorization': 'Token $token',
       },
@@ -61,7 +61,7 @@ class ApiClient {
     final response = await _client.post(
       _uri('/api/v1/auth/token/'),
       headers: const {
-        'Accept' : 'application/json',
+        'Accept': 'application/json',
         'Content-Type': 'application/json; charset=UTF-8',
       },
       body: jsonEncode({'username': username, 'password': password}),
@@ -75,10 +75,7 @@ class ApiClient {
   Future<void> logout({required String token}) async {
     final response = await _client.post(
       _uri('/api/v1/auth/logout'),
-      headers: {
-        'Accept': 'application/json',
-        "Authorization": 'Token $token',
-      },
+      headers: {'Accept': 'application/json', "Authorization": 'Token $token'},
     );
     _ensureSuccess(response);
   }

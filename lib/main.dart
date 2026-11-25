@@ -3,15 +3,16 @@ import 'package:myportofolio_mobile/screens/menu.dart';
 import 'package:myportofolio_mobile/services/api_client.dart';
 import 'package:myportofolio_mobile/services/auth_state.dart';
 import 'package:provider/provider.dart';
+
 void main() {
   runApp(MyApp(apiClient: ApiClient()));
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({required this.apiClient, super.key});
-  
+
   final ApiClient apiClient;
-  
+
   @override
   Widget build(BuildContext context) {
     // MultiProvider wraps the app and injects a collection of Provider objects.
@@ -35,4 +36,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

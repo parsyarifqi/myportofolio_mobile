@@ -18,9 +18,7 @@ class LeftDrawer extends StatelessWidget {
       child: ListView(
         children: [
           const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.indigo,
-            ),
+            decoration: BoxDecoration(color: Colors.indigo),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -35,10 +33,7 @@ class LeftDrawer extends StatelessWidget {
                 SizedBox(height: 10),
                 Text(
                   'Explore personal projects and experiences!',
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.white,
-                  ),
+                  style: TextStyle(fontSize: 15, color: Colors.white),
                 ),
               ],
             ),
@@ -51,9 +46,7 @@ class LeftDrawer extends StatelessWidget {
             onTap: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => MyHomePage(),
-                ),
+                MaterialPageRoute(builder: (context) => MyHomePage()),
               );
             },
           ),
@@ -89,7 +82,7 @@ class LeftDrawer extends StatelessWidget {
 
           const Divider(),
 
-          if (!isLoggedIn) 
+          if (!isLoggedIn)
             ListTile(
               leading: const Icon(Icons.login),
               title: const Text('Login'),
@@ -100,20 +93,20 @@ class LeftDrawer extends StatelessWidget {
                 );
               },
             )
-          else 
-              ListTile(
-                leading: const Icon(Icons.logout),
-                title: const Text('Logout'),
-                onTap: () async {
-                  final navigator = Navigator.of(context);
-                  final messenger = ScaffoldMessenger.of(context);
-                  await context.read<AuthState>().logout();
-                  navigator.pop();
-                  messenger.showSnackBar(
-                    const SnackBar(content: Text('Logged out.')),
-                  );
-                },
-              ),
+          else
+            ListTile(
+              leading: const Icon(Icons.logout),
+              title: const Text('Logout'),
+              onTap: () async {
+                final navigator = Navigator.of(context);
+                final messenger = ScaffoldMessenger.of(context);
+                await context.read<AuthState>().logout();
+                navigator.pop();
+                messenger.showSnackBar(
+                  const SnackBar(content: Text('Logged out.')),
+                );
+              },
+            ),
         ],
       ),
     );

@@ -11,11 +11,11 @@ class Project {
     required this.description,
     required this.techStack,
     required this.projectUrl,
-    this.projectImageUrl = ''
+    this.projectImageUrl = '',
   });
 
-  factory Project.fromJson(Map<String, dynamic> json) => 
-    _$ProjectFromJson(json);
+  factory Project.fromJson(Map<String, dynamic> json) =>
+      _$ProjectFromJson(json);
 
   // TODO: Implement factory Project.fromJson(Map<String, dynamic> json)
   // delegating to _$ProjectFromJson(json)
@@ -30,5 +30,4 @@ class Project {
   final String projectImageUrl;
 
   Map<String, dynamic> toJson() => _$ProjectToJson(this);
-
 }

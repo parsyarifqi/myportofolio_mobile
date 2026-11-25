@@ -66,16 +66,17 @@ class _ProjectListScreenState extends State<ProjectListScreen> {
 
           final projects = snapshot.data ?? const <Project>[];
 
-          if (projects.isEmpty){
+          if (projects.isEmpty) {
             return RefreshIndicator(
               onRefresh: _reload,
               child: LayoutBuilder(
                 builder: (context, constraints) => SingleChildScrollView(
                   physics: const AlwaysScrollableScrollPhysics(),
                   child: ConstrainedBox(
-                    constraints: 
-                      BoxConstraints(minHeight: constraints.maxHeight),
-                    child: const Center(child: Text('No projects found.'))
+                    constraints: BoxConstraints(
+                      minHeight: constraints.maxHeight,
+                    ),
+                    child: const Center(child: Text('No projects found.')),
                   ),
                 ),
               ),
@@ -100,14 +101,14 @@ class _ProjectListScreenState extends State<ProjectListScreen> {
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(height: 4), 
+                        const SizedBox(height: 4),
                         Text(
                           project.techStack,
                           style: const TextStyle(fontWeight: FontWeight.w600),
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          project.description, 
+                          project.description,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -118,15 +119,14 @@ class _ProjectListScreenState extends State<ProjectListScreen> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (_) =>
-                            ProjectDetailScreen(project: project),
+                          builder: (_) => ProjectDetailScreen(project: project),
                         ),
                       );
                     },
                   ),
                 );
               },
-            )
+            ),
           );
         },
       ),
